@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Jihene Kachouri</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: rgb(139, 0, 0);
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #000;
+            padding: 1rem 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: rgb(139, 0, 0); /* Bordeaux red hover color */
+        }
+
+        /* Education Section */
+        .education-section {
+            padding: 3rem;
+            background-color: #f9f9f9;
+            margin: 3rem 0;
+            border-radius: 8px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .education-section h2 {
+            font-size: 2.5rem;
+            color: rgb(139, 0, 0);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .education-item {
+            background-color: #fff;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .education-item:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .education-item h3 {
+            font-size: 1.8rem;
+            color: rgb(139, 0, 0);
+            margin-bottom: 1rem;
+        }
+
+        .education-item p {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .education-item .year {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: rgb(139, 0, 0);
+        }
+
+        /* Full-Screen Mode */
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .fullscreen img, .fullscreen video {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .fullscreen .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #000;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer .footer-content p {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        footer .social-links {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer .social-links li {
+            margin: 0 15px;
+        }
+
+        footer .social-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-links a:hover {
+            color: rgb(139, 0, 0); /* Bordeaux red hover color */
+        }
+
+        /* Button Style */
+.education-item .institute-btn {
+    display: inline-block;
+    background-color: black; /* Black color for the button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.education-item .institute-btn:hover {
+    background-color: rgb(139, 0, 0); /* Bordeaux red color on hover */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="education.html"><i class="fa fa-graduation-cap"></i> Education</a></li>
+                <li><a href="skills.html"><i class="fa fa-cogs"></i> Skills</a></li>
+                <li><a href="internships.html"><i class="fa fa-briefcase"></i> Internships</a></li>
+                <li><a href="events.html"><i class="fa fa-calendar"></i> Events</a></li>
+                <li><a href="subjects.html"><i class="fa fa-book"></i> Subjects</a></li>
+                <li><a href="hobbies.html"><i class="fa fa-heart"></i> Hobbies</a></li>
+                <li><a href="quiz.html"><i class="fa fa-question-circle"></i> Quiz</a></li>
+                <li><a href="testimonials.html"><i class="fa fa-comments"></i> Testimonials</a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="education" class="education-section">
+            <div class="education-item">
+                <h3>Bachelor of Science Degree</h3>
+                <p>Specialization in Science</p>
+                <p class="year">2018 - 2021</p>
+                <a href="https://www.ecoles.com.tn/etablissements/secondaire/lycee-25-juillet-1957-sfax" class="institute-btn" target="_blank">Lycée 25 Juillet 1957</a>
+                <br>
+                <a href="#" class="read-more" onclick="toggleMoreInfo('more-info-1')">Read more</a>
+                <div id="more-info-1" class="more-info" style="display: none;">
+                    <p>This is a photo of Lycée 25 Juillet 1957, Sfax:</p>
+                    <a href="#" onclick="openImageFullscreen('lycce25.jpg'); return false;">View Photo</a>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <h3>Bachelor's Degree in Computer Science</h3>
+                <p>Specialization in Big Data and Data Analysis</p>
+                <p class="year">2021 - 2024</p>
+                <a href="https://isimsf.rnu.tn/fra/home" class="institute-btn" target="_blank">Institut Supérieur d'Informatique et de Multimédia de Sfax</a>
+                <br>
+                <a href="#" class="read-more" onclick="toggleMoreInfo('more-info-2')">Read more</a>
+                <div id="more-info-2" class="more-info" style="display: none;">
+                    <p>Watch a <a href="#" onclick="openVideoFullscreen('Future Students Welcome to ISIMS.mp4'); return false;">video</a> about the Higher Institute of Computer Science and Multimedia of Sfax.</p>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <h3>Engineering Cycle</h3>
+                <p>Institut International de Technologie</p>
+                <p class="year">2024 - Present</p>
+                <a href="https://iit.tn/" class="institute-btn" target="_blank">Institut International de Technologie</a>
+                <br>
+                <a href="#" class="read-more" onclick="toggleMoreInfo('more-info-3')">Read more</a>
+                <div id="more-info-3" class="more-info" style="display: none;">
+                    <p>Watch a <a href="#" onclick="openVideoFullscreen('North American Private University 3D Campus video.mp4'); return false;">video</a> about the IIT program.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Jihene Kachouri. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/in/jihene-kachouri-5a3203233" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://github.com/kachourijihene" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a href="mailto:jihene.kachouri.bac2021@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        function openVideoFullscreen(videoSrc) {
+            const fullscreenDiv = document.createElement('div');
+            fullscreenDiv.classList.add('fullscreen');
+
+            const closeButton = document.createElement('span');
+            closeButton.classList.add('close-btn');
+            closeButton.innerHTML = '&times;';
+            closeButton.onclick = closeFullscreen;
+
+            const videoElement = document.createElement('video');
+            videoElement.src = videoSrc;
+            videoElement.controls = true;
+            videoElement.autoplay = true;
+            videoElement.style.maxWidth = '90%';
+            videoElement.style.maxHeight = '90%';
+
+            fullscreenDiv.appendChild(closeButton);
+            fullscreenDiv.appendChild(videoElement);
+            document.body.appendChild(fullscreenDiv);
+
+            function closeFullscreen() {
+                document.body.removeChild(fullscreenDiv);
+                document.removeEventListener('keydown', handleEscape);
+            }
+
+            function handleEscape(event) {
+                if (event.key === 'Escape') {
+                    closeFullscreen();
+                }
+            }
+
+            document.addEventListener('keydown', handleEscape);
+        }
+
+        function openImageFullscreen(imageSrc) {
+            const fullscreenDiv = document.createElement('div');
+            fullscreenDiv.classList.add('fullscreen');
+
+            // Close button
+            const closeButton = document.createElement('span');
+            closeButton.classList.add('close-btn');
+            closeButton.innerHTML = '&times;';
+            closeButton.onclick = closeFullscreen;
+
+            // Image element
+            const imgElement = document.createElement('img');
+            imgElement.src = imageSrc;
+            imgElement.alt = 'Fullscreen Image';
+
+            fullscreenDiv.appendChild(closeButton);
+            fullscreenDiv.appendChild(imgElement);
+            document.body.appendChild(fullscreenDiv);
+
+            // Close fullscreen function
+            function closeFullscreen() {
+                document.body.removeChild(fullscreenDiv);
+                document.removeEventListener('keydown', handleEscape);
+            }
+
+            // Escape key handler
+            function handleEscape(event) {
+                if (event.key === 'Escape') {
+                    closeFullscreen();
+                }
+            }
+
+            document.addEventListener('keydown', handleEscape);
+        }
+
+        function toggleMoreInfo(id) {
+            const moreInfo = document.getElementById(id);
+            moreInfo.style.display = moreInfo.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

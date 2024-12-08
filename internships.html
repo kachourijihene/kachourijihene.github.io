@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internships - Jihene Kachouri</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        /* Internships Section */
+        .internships-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .internships-section h2 {
+            font-size: 32px;
+            text-align: center;
+            color: black;
+        }
+
+        .internships-section p {
+            font-size: 18px;
+            text-align: center;
+            color: black;
+        }
+
+ /* Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #ddd;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Timeline Item Styles */
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color:rgb(139, 0, 0);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Timeline Item Styles */
+.timeline-item {
+    padding: 20px;
+    background-color: white;
+    border-radius: 6px;
+    position: relative;
+    width: 45%;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item-left {
+    left: 0;
+}
+
+.timeline-item-right {
+    left: 50%; 
+}
+
+.timeline-item h3 {
+    font-size: 24px;
+    color: rgb(139, 0, 0);
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    font-size: 16px;
+    color: #333;
+}
+
+.timeline-item .tech-stack {
+    font-weight: bold;
+    color: rgb(139, 0, 0);
+}
+
+.timeline-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item li {
+    margin: 5px 0;
+}
+
+.timeline-item .date {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 14px;
+    color:rgb(139, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+    .timeline-item {
+        width: 100%;
+        left: 0;
+        margin: 20px 0;
+    }
+
+    .timeline::after {
+        left: 30px;
+    }
+}
+
+
+        /* Responsive Styling */
+        @media screen and (max-width: 768px) {
+            .timeline-item {
+                width: 100%;
+                left: 0;
+                margin: 20px 0;
+            }
+
+            .timeline::after {
+                left: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" ><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="education.html" ><i class="fa fa-graduation-cap"></i> Education</a></li>
+                <li><a href="skills.html" ><i class="fa fa-cogs"></i> Skills</a></li>
+                <li><a href="internships.html" ><i class="fa fa-briefcase"></i> Internships</a></li>
+                <li><a href="events.html" ><i class="fa fa-calendar"></i> Events</a></li>
+                <li><a href="subjects.html" ><i class="fa fa-book"></i> Subjects</a></li>
+                <li><a href="hobbies.html" ><i class="fa fa-heart"></i> Hobbies</a></li>
+                <li><a href="quiz.html" ><i class="fa fa-question-circle"></i> Quiz</a></li>
+                <li><a href="testimonials.html" ><i class="fa fa-comments"></i> Testimonials</a></li>
+                <li><a href="contact.html" ><i class="fa fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="internships-section">
+            <h2>My Internships</h2>
+            <p>Here are some of the internships I have undertaken to gain practical experience:</p>
+            <div class="timeline">
+                <div class="timeline-item timeline-item-left">
+                    <h3>Development Intern</h3>
+                    <div class="date">July 2023 – August 2023</div>
+                    <p><strong>Company:</strong> Fogits, Sfax, Tunisia</p>
+                    <p><strong>Description:</strong> Developed a section in the accounting module of the Odoo ERP system. Implemented functionality to generate accounting reports in XML format, ensuring compliance with the Tunisian tax system.</p>
+                    <p class="tech-stack"><strong>Technology Used:</strong></p>
+                    <ul>
+                        <li>Python</li>
+                        <li>XML</li>
+                        <li>GitLab</li>
+                        <li>Docker</li>
+                        <li>PostgreSQL</li>
+                        <li>Ubuntu</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item timeline-item-right">
+                    <h3>DevOps Intern</h3>
+                    <div class="date">February 1, 2024 – May 31, 2024</div>
+                    <p><strong>Company:</strong> Fogits, Sfax, Tunisia</p>
+                    <p><strong>Description:</strong> Implementation of a Network Operations Center (NOC). Integrated Zabbix for network monitoring and performance management, used Grafana for real-time data visualization and reporting. Utilized Ansible for incident management and automation tasks, implemented GLPI for ticketing system setup and customization.</p>
+                    <p class="tech-stack"><strong>Technology Used:</strong></p>
+                    <ul>
+                        <li>Zabbix</li>
+                        <li>Grafana</li>
+                        <li>Ansible</li>
+                        <li>GLPI</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Jihene Kachouri. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/in/jihene-kachouri-5a3203233" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://github.com/kachourijihene" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a href="mailto:jihene.kachouri.bac2021@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

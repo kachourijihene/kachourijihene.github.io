@@ -1,0 +1,271 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: rgb(139, 0, 0);
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    height: 100%; /* Ensure full height of the page */
+}
+
+main {
+    flex: 1; /* Allow main content to grow and take available space */
+}
+
+/* Navbar */
+header {
+    background-color: #000; /* Navbar background set to black */
+    padding: 1rem 0;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff; /* White text color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Navbar hover effect: change text color to red */
+.navbar a:hover {
+    color: rgb(139, 0, 0); /* Red on hover */
+}
+
+/* Intro Section */
+.intro-section {
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center;
+    height: 90vh;
+    padding: 2rem;
+    text-align: left; /* Left-align the text */
+    position: relative;
+    max-width: 80%; /* Ensure the intro section does not take up the entire width */
+    margin-left: 10%; /* Optional: Creates a slight off-center effect */
+    padding-bottom: 50px; /* Space for the button below the text */
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.5; /* Adjust line-height for better spacing between lines */
+    color: rgb(139, 0, 0);
+    margin: 0;
+}
+
+h1 span {
+    display: block; /* Make each span appear on a new line */
+    color: rgb(139, 0, 0);
+}
+
+/* Dynamic Text: Separate lines and control spacing */
+#dynamic-text-1,
+#dynamic-text-2,
+#dynamic-text-3 {
+    margin-bottom: 10px; /* Adds spacing between each line */
+    padding-left: 20px; /* Optional: Adds some left padding for better text positioning */
+}
+
+/* Biography Section */
+.biography-section {
+    padding: 2rem;
+    background-color: #f1f1f1; /* Light background color */
+    margin: 2rem 0;
+    border-radius: 8px;
+}
+
+.biography-section h2 {
+    font-size: 2rem;
+    color: rgb(139, 0, 0); /* Red color */
+    margin-bottom: 1rem;
+}
+
+.biography-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333; /* Text color */
+    max-width: 800px;
+    margin: 0 auto; /* Center the text */
+}
+
+/* Button Styling */
+.intro-section .text-center {
+    text-align: center; /* Center the button */
+    margin-bottom: 2cm; /* Distance of 2 cm below the button */
+}
+
+.btn {
+    display: inline-block;
+    background-color: rgb(139, 0, 0); /* Button background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Internal padding */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    margin-bottom: 20px; /* Spacing below the button */
+    position: relative;
+    top: 200px;
+    left: 170px;
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: darkred; /* Background color on hover */
+}
+
+/* Image Style - Keeps the image in place and positioned to the right */
+.image-container {
+    position: absolute; /* Absolute positioning for the image */
+    right: 0; /* Align the image to the right */
+    top: 50%; /* Vertically center the image */
+    transform: translateY(-50%); /* Adjust for exact vertical centering */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.profile-image {
+    max-width: 100%;  /* Ensures image does not exceed container width */
+    height: auto;     /* Maintains aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+    transform-origin: center center; /* Zooms from the center of the image */
+}
+
+/* Zoom effect on hover */
+.profile-image:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Social Media Icons - Left Corner */
+.nav-links.icons {
+    position: fixed;
+    left: 20px; /* Icons are positioned to the left */
+    top: 50%; /* Vertically at the middle of the page */
+    transform: translateY(-50%); /* Adjust the positioning to be centered */
+    display: flex;
+    flex-direction: column; /* Icons are stacked vertically */
+    gap: 15px; /* Spacing between the icons */
+}
+
+.nav-links.icons a {
+    color: #333; /* Color of the icons */
+    font-size: 2rem; /* Size of the icons */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+/* Social Media Icons hover effect */
+.nav-links.icons a:hover {
+    color: rgb(139, 0, 0); /* Change color to red on hover */
+    transform: scale(1.1); /* Enlarge icon on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #080505;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: auto; /* Push footer to the bottom of the page */
+}
+
+footer .footer-content {
+    padding: 0 20px;
+}
+
+footer .social-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+footer .social-links li {
+    margin: 0 10px;
+}
+
+footer .social-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+footer .social-links li a:hover {
+    color: rgb(139, 0, 0);
+}
+
+/* Skills, Events, and Internships Sections */
+.skills-section, .events-section, .internships-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e8e8e8;
+    border-radius: 8px;
+}
+
+.skills-section ul, .events-section ul, .internships-section ul {
+    padding-left: 20px;
+}
+
+.skills-section ul li, .events-section ul li, .internships-section ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column;
+        text-align: center; 
+
+    .image-container {
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem; 
+        max-width: 100%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    footer .social-links {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    footer .social-links li {
+        margin: 10px 0;
+    }
+}
+}

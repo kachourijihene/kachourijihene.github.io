@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Jihene Kachouri</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-section h2 {
+            font-size: 32px;
+            text-align: center;
+            color: black;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: rgb(139,0,0);
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .email-button {
+            padding: 12px 20px;
+            background-color:black;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .email-button:hover {
+            background-color: rgb(139,0,0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="education.html"><i class="fa fa-graduation-cap"></i> Education</a></li>
+                <li><a href="skills.html"><i class="fa fa-cogs"></i> Skills</a></li>
+                <li><a href="internships.html"><i class="fa fa-briefcase"></i> Internships</a></li>
+                <li><a href="events.html"><i class="fa fa-calendar"></i> Events</a></li>
+                <li><a href="subjects.html"><i class="fa fa-book"></i> Subjects</a></li>
+                <li><a href="hobbies.html"><i class="fa fa-heart"></i> Hobbies</a></li>
+                <li><a href="quiz.html"><i class="fa fa-question-circle"></i> Quiz</a></li>
+                <li><a href="testimonials.html"><i class="fa fa-comments"></i> Testimonials</a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h2>Contact Me</h2>
+            <form class="contact-form" action="https://formspree.io/f/xgvebvgj" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+            <div class="contact-info">
+                <p>Or email me directly:</p>
+                <a href="mailto:jihene.kachouri.bac2021@gmail.com" class="email-button">Send an Email</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Jihene Kachouri. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/in/jihene-kachouri-5a3203233" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://github.com/kachourijihene" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a href="mailto:jihene.kachouri.bac2021@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

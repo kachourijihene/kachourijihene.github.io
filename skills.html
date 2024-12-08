@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Jihene Kachouri</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .skills-section h2 {
+            font-size: 32px;
+            text-align: center;
+            color:black;
+        }
+
+        .skills-section p {
+            font-size: 18px;
+            text-align: center;
+            color:black;
+        }
+
+        /* Card Layout for Skills */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-card h3 {
+            font-size: 24px;
+            color: rgb(139, 0, 0);
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            color: #333;
+            font-size: 16px;
+        }
+
+        /* Icons for Skill Categories */
+        .skill-card i {
+            font-size: 40px;
+            color: rgb(139, 0, 0);
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Styling */
+        @media screen and (max-width: 768px) {
+            .skills-section {
+                padding: 20px;
+            }
+
+            .skills-container {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" ><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="education.html" ><i class="fa fa-graduation-cap"></i> Education</a></li>
+                <li><a href="skills.html" ><i class="fa fa-cogs"></i> Skills</a></li>
+                <li><a href="internships.html" ><i class="fa fa-briefcase"></i> Internships</a></li>
+                <li><a href="events.html" ><i class="fa fa-calendar"></i> Events</a></li>
+                <li><a href="subjects.html" ><i class="fa fa-book"></i> Subjects</a></li>
+                <li><a href="hobbies.html" ><i class="fa fa-heart"></i> Hobbies</a></li>
+                <li><a href="quiz.html" ><i class="fa fa-question-circle"></i> Quiz</a></li>
+                <li><a href="testimonials.html" ><i class="fa fa-comments"></i> Testimonials</a></li>
+                <li><a href="contact.html" ><i class="fa fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="skills" class="skills-section">
+            <h2>My Skills</h2>
+            <p>Below are some of the key skills I have developed throughout my academic and professional experiences:</p>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming Languages</h3>
+                    <p>Java, Python, C++, JavaScript</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Database Management</h3>
+                    <p>MySQL, MongoDB, SQL</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Big Data Analysis</h3>
+                    <p>Hadoop, Spark</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-car"></i>
+                    <h3>Automotive Software Testing</h3>
+                    <p>CAN, LIN, Ethernet, FlexRay, SOMEIP, DOIP</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-github"></i>
+                    <h3>Version Control</h3>
+                    <p>Git, GitHub, GitLab</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-tasks"></i>
+                    <h3>Project Management</h3>
+                    <p>Jira, Scrum</p>
+                </div>
+                <!-- New Skills -->
+                <div class="skill-card">
+                    <i class="fab fa-docker"></i>
+                    <h3>Docker</h3>
+                    <p>Containerization, Docker Compose</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-linux"></i>
+                    <h3>Linux</h3>
+                    <p>Command Line, System Administration</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-android"></i>
+                    <h3>Android Studio</h3>
+                    <p>Mobile App Development</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-aws"></i>
+                    <h3>Cloud</h3>
+                    <p>AWS, Azure, Google Cloud</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-ansible"></i>
+                    <h3>Ansible</h3>
+                    <p>Automation, Configuration Management</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Odoo</h3>
+                    <p>ERP Development and Customization</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-chart-area"></i>
+                    <h3>Monitoring Tools</h3>
+                    <p>GLPI, Grafana, Zabbix</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-xml"></i>
+                    <h3>XML</h3>
+                    <p>Data Representation, Parsing</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Jihene Kachouri. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/in/jihene-kachouri-5a3203233" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://github.com/kachourijihene" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a href="mailto:jihene.kachouri.bac2021@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

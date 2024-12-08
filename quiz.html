@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Jihene Kachouri</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #000;
+            padding: 1rem 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: rgb(139, 0, 0);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.5;
+            color: rgb(139, 0, 0);
+            margin: 0;
+            text-align: center;
+            padding-top: 3rem;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: black; 
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        label {
+            color: black; 
+            cursor: pointer;
+        }
+
+        button {
+            background-color: rgb(139, 0, 0);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+
+        input[type="radio"]:checked + label {
+            color: rgb(139, 0, 0); 
+        }
+
+        input[type="radio"]:checked {
+            accent-color: rgb(139, 0, 0); 
+        }
+
+        input[type="radio"]:hover {
+            cursor: pointer; 
+        }
+
+        #resultModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #resultContent, #alertContent {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 80%;
+        }
+
+        #score {
+            font-weight: bold;
+            font-size: 24px;
+            color: rgb(139, 0, 0);
+        }
+
+        #resultContent button, #alertContent button {
+            margin-top: 20px;
+            background-color: rgb(139, 0, 0);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #resultContent button:hover, #alertContent button:hover {
+            background-color: darkred;
+        }
+
+        #confirmationModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #confirmationModal .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 80%;
+            text-align: center;
+        }
+
+        #confirmationModal .modal-content button {
+            margin-top: 10px;
+            background-color: rgb(139, 0, 0);
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #confirmationModal .modal-content button:hover {
+            background-color: darkred;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar ul li {
+                margin: 10px 0;
+            }
+
+            form {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+                padding-top: 2rem;
+            }
+
+            button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="education.html"><i class="fa fa-graduation-cap"></i> Education</a></li>
+                <li><a href="skills.html"><i class="fa fa-cogs"></i> Skills</a></li>
+                <li><a href="internships.html"><i class="fa fa-briefcase"></i> Internships</a></li>
+                <li><a href="events.html"><i class="fa fa-calendar"></i> Events</a></li>
+                <li><a href="subjects.html"><i class="fa fa-book"></i> Subjects</a></li>
+                <li><a href="hobbies.html"><i class="fa fa-heart"></i> Hobbies</a></li>
+                <li><a href="quiz.html"><i class="fa fa-question-circle"></i> Quiz</a></li>
+                <li><a href="testimonials.html"><i class="fa fa-comments"></i> Testimonials</a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Quiz</h1>
+        <form id="quizForm" onsubmit="return validateForm(event)">
+            <!-- Question 1 -->
+            <div>
+                <p>1. What is a tool for monitoring?</p>
+                <label><input type="radio" name="q1" value="Fogits"> Fogits</label><br>
+                <label><input type="radio" name="q1" value="Zabbix"> Zabbix</label><br>
+                <label><input type="radio" name="q1" value="Grafana"> Grafana</label>
+            </div>
+        
+            <!-- Question 2 -->
+            <div>
+                <p>2. What is a network automation tool?</p>
+                <label><input type="radio" name="q2" value="Zabbix"> Zabbix</label><br>
+                <label><input type="radio" name="q2" value="Ansible"> Ansible</label><br>
+                <label><input type="radio" name="q2" value="PostgreSQL"> PostgreSQL</label>
+            </div>
+        
+            <!-- Question 3 -->
+            <div>
+                <p>3. Which of the following is an open-source monitoring tool?</p>
+                <label><input type="radio" name="q3" value="Nagios"> Nagios</label><br>
+                <label><input type="radio" name="q3" value="GoogleAnalytics"> Google Analytics</label><br>
+                <label><input type="radio" name="q3" value="PowerBI"> Power BI</label>
+            </div>
+        
+            <!-- Question 4 -->
+            <div>
+                <p>4. What does 'DNS' stand for in networking?</p>
+                <label><input type="radio" name="q4" value="Dynamic Network System"> Dynamic Network System</label><br>
+                <label><input type="radio" name="q4" value="Domain Name System"> Domain Name System</label><br>
+                <label><input type="radio" name="q4" value="Data Network Service"> Data Network Service</label>
+            </div>
+        
+            <!-- Question 5 -->
+            <div>
+                <p>5. Which programming language is commonly used for network automation?</p>
+                <label><input type="radio" name="q5" value="Python"> Python</label><br>
+                <label><input type="radio" name="q5" value="Java"> Java</label><br>
+                <label><input type="radio" name="q5" value="C++"> C++</label>
+            </div>
+        
+            <!-- Question 6 -->
+            <div>
+                <p>6. What does 'API' stand for?</p>
+                <label><input type="radio" name="q6" value="Application Programming Interface"> Application Programming Interface</label><br>
+                <label><input type="radio" name="q6" value="Automated Process Integration"> Automated Process Integration</label><br>
+                <label><input type="radio" name="q6" value="Advanced Program Interaction"> Advanced Program Interaction</label>
+            </div>
+        
+            <!-- Question 7 -->
+            <div>
+                <p>7. What is the best way to store configuration files for automation?</p>
+                <label><input type="radio" name="q7" value="Plain Text"> Plain Text</label><br>
+                <label><input type="radio" name="q7" value="JSON"> JSON</label><br>
+                <label><input type="radio" name="q7" value="Microsoft Word"> Microsoft Word</label>
+            </div>
+        
+            <!-- Question 8 -->
+            <div>
+                <p>8. What is a common use of Docker in automation?</p>
+                <label><input type="radio" name="q8" value="Hosting static websites"> Hosting static websites</label><br>
+                <label><input type="radio" name="q8" value="Running isolated applications"> Running isolated applications</label><br>
+                <label><input type="radio" name="q8" value="Sending emails"> Sending emails</label>
+            </div>
+        
+            <div>
+                <p>9. What does HTTP stand for?</p>
+                <label><input type="radio" name="q9" value="HyperText Transfer Protocol"> HyperText Transfer Protocol</label><br>
+                <label><input type="radio" name="q9" value="HyperTool Technology Protocol"> HyperTool Technology Protocol</label><br>
+                <label><input type="radio" name="q9" value="High-Tech Telecommunication Protocol"> High-Tech Telecommunication Protocol</label>
+            </div>
+        
+            <div>
+                <p>10. What does SSL stand for?</p>
+                <label><input type="radio" name="q10" value="Secure Sockets Layer"> Secure Sockets Layer</label><br>
+                <label><input type="radio" name="q10" value="System Security Layer"> System Security Layer</label><br>
+                <label><input type="radio" name="q10" value="Software Security Layer"> Software Security Layer</label>
+            </div>
+            <div>
+                <p>11. What is the best practice for version control?</p>
+                <label><input type="radio" name="q11" value="Using Git"> Using Git</label><br>
+                <label><input type="radio" name="q11" value="Using Notepad"> Using Notepad</label><br>
+                <label><input type="radio" name="q11" value="Using FTP"> Using FTP</label>
+            </div>
+        
+            <div>
+                <p>12. What is the most commonly used language for front-end development?</p>
+                <label><input type="radio" name="q12" value="JavaScript"> JavaScript</label><br>
+                <label><input type="radio" name="q12" value="Python"> Python</label><br>
+                <label><input type="radio" name="q12" value="Ruby"> Ruby</label>
+            </div>
+        
+            <div>
+                <p>13. What is the most popular database for web development?</p>
+                <label><input type="radio" name="q13" value="MongoDB"> MongoDB</label><br>
+                <label><input type="radio" name="q13" value="MySQL"> MySQL</label><br>
+                <label><input type="radio" name="q13" value="SQLite"> SQLite</label>
+            </div>
+        
+            <div>
+                <p>14. What is a key feature of Agile methodology?</p>
+                <label><input type="radio" name="q14" value="Iterative development"> Iterative development</label><br>
+                <label><input type="radio" name="q14" value="Big Bang planning"> Big Bang planning</label><br>
+                <label><input type="radio" name="q14" value="Fixed scope"> Fixed scope</label>
+            </div>
+        
+            <div>
+                <p>15. What does 'CI/CD' stand for?</p>
+                <label><input type="radio" name="q15" value="Continuous Integration/Continuous Delivery"> Continuous Integration/Continuous Delivery</label><br>
+                <label><input type="radio" name="q15" value="Centralized Information/Continuous Design"> Centralized Information/Continuous Design</label><br>
+                <label><input type="radio" name="q15" value="Complex Integration/Continuous Deployment"> Complex Integration/Continuous Deployment</label>
+            </div>
+        
+        
+        
+            <button type="submit">Submit Quiz</button>
+        </form>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Jihene Kachouri. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/in/jihene-kachouri-5a3203233" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://github.com/kachourijihene" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a href="mailto:jihene.kachouri.bac2021@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <div id="resultModal">
+        <div id="resultContent">
+            <h2>Your Result</h2>
+            <p id="score"></p>
+            <button onclick="closeResult()">Close</button>
+        </div>
+    </div>
+    
+    <script>
+function validateForm(event) {
+    event.preventDefault();
+    
+    const form = document.getElementById('quizForm');
+    let allAnswered = true;
+    
+    for (let i = 1; i <= 10; i++) {
+        const question = form.querySelector(`input[name="q${i}"]:checked`);
+        if (!question) {
+            allAnswered = false;
+            break;
+        }
+    }
+    
+    if (!allAnswered) {
+        alert("Please answer all questions before submitting!");
+        return;  
+    }
+
+    const answers = {
+        q1: 'Zabbix',
+        q2: 'Ansible',
+        q3: 'Nagios',
+        q4: 'Domain Name System',
+        q5: 'Python',
+        q6: 'Application Programming Interface',
+        q7: 'JSON',
+        q8: 'Running isolated applications',
+        q9: 'HyperText Transfer Protocol',
+        q10: 'Secure Sockets Layer',
+        q11: 'Using Git',
+        q12: 'JavaScript',
+        q13: 'MySQL',
+        q14: 'Iterative development',
+        q15: 'Continuous Integration/Continuous Delivery'
+    };
+
+    let score = 0;
+
+    for (let i = 1; i <= 15; i++) {
+        const question = form.querySelector(`input[name="q${i}"]:checked`);
+        if (question && question.value === answers[`q${i}`]) {
+            score++;
+        }
+    }
+
+    const resultModal = document.getElementById('resultModal');
+    const scoreDisplay = document.getElementById('score');
+    scoreDisplay.textContent = `You scored ${score}/10!`;
+    resultModal.style.display = 'flex';
+}
+
+function closeResult() {
+    const resultModal = document.getElementById('resultModal');
+    resultModal.style.display = 'none';
+}
+
+    </script>
+</body>
+</html>
